@@ -1,7 +1,6 @@
 <?php
 $user= 'robert.y.sayegh.18@dartmouth.edu';
 $pass='Dummy123';
-<<<<<<< HEAD
 //$response = exec("/home/jef28/public_html/swipr/phantomjs /home/jef28/public_html/swipr/login.js $user $pass", $output);
 //echo $output;
 ?>
@@ -33,16 +32,5 @@ function execute($script, $args, $options = array(), $bin = 'phantomjs', $debug 
 
 }
 
-execute('/home/jef28/public_html/swipr/login.js', $args, false, $bin, $debug);
-=======
-$response = exec(dirname(__FILE__) . "\phantomjs login.js $user $pass", $output, $return);
-echo print_r($output);
-echo dirname(__FILE__);
-echo $output[0];
-if (!$return) {
-	echo "Created successfully";
-} else {
-	echo "Not created";
-}
->>>>>>> FETCH_HEAD
+execute(dirname(__FILE__) .'/login.js', $args, false, $bin, $debug);
 ?>
